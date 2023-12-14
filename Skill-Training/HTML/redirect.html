@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background-color: #000000;
+      color: #0bfa0f;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    h1 {
+      font-size: 12em;
+      opacity: 0;
+      animation: zoomOutAndRedirect 3s cubic-bezier(0.42, 0, 0.58, 1) forwards;
+    }
+
+    @keyframes zoomOutAndRedirect {
+      0% {
+        opacity: 1;
+        transform: scale(1);
+      }
+      100% {
+        opacity: 0;
+        transform: scale(2);
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1 id="zoomOutText">RESUME</h1>
+
+  <script>
+    document.getElementById('zoomOutText').addEventListener('animationend', function() {
+      window.location.href = 'Resume.html';
+    });
+  </script>
+</body>
+</html>
